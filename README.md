@@ -4,23 +4,23 @@ Combining Events With Selectors :
 
 Console Check - 
 
-$("#output div:last").show();
-m.fn.init [div.shape.circle.red, prevObject: m.fn.init(1), context: document, selector: '#output div:last']0: div.shape.circle.redcontext: documentlength: 1prevObject: m.fn.init [document, context: document]selector: "#output div:last"[[Prototype]]: Object(0)
+Input : $("#output div:last").show();
+Output : div.shape.circle.red
 
-$("#output div:last").hide();
-m.fn.init [div.shape.circle.red, prevObject: m.fn.init(1), context: document, selector: '#output div:last']0: div.shape.circle.redcontext: documentlength: 1prevObject: m.fn.init [document, context: document]selector: "#output div:last"[[Prototype]]: Object(0)
+Input : $("#output div:last").hide();
+Output : div.shape.circle.red
 
-$("#output div:last").hide().show();
-m.fn.init [div.shape.circle.red, prevObject: m.fn.init(1), context: document, selector: '#output div:last']
+Input : $("#output div:last").hide().show();
+Output : div.shape.circle.red
 
-$("#output div:last").addClass("triange");
-m.fn.init [div.shape.circle.red.triange, prevObject: m.fn.init(1), context: document, selector: '#output div:last']
+Input : $("#output div:last").addClass("triange");
+Output : div.shape.circle.red.triange
 
-$("#output div:last").addClass("triange").addClass("orange");
-m.fn.init [div.shape.circle.red.triange.orange, prevObject: m.fn.init(1), context: document, selector: '#output div:last']
+Input : $("#output div:last").addClass("triange").addClass("orange");
+Output : div.shape.circle.red.triange.orange
 
-$("#output div:last").show().addClass("triange").addClass("orange");
-m.fn.init [div.shape.circle.red.triange.orange, prevObject: m.fn.init(1), context: document, selector: '#output div:last']
+Input : $("#output div:last").show().addClass("triange").addClass("orange");
+Output : div.shape.circle.red.triange.orange
 
-$("#output div:last").addClass("triange").addClass("orange").show();
-m.fn.init [div.shape.circle.red.triange.orange, prevObject: m.fn.init(1), context: document, selector: '#output div:last']
+Input : $("#output div:last").addClass("triange").addClass("orange").show();
+Output : div.shape.circle.red.triange.orange
