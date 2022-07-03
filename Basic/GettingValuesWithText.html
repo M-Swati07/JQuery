@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Your description here">
+        <meta name="author" content="Your name">
+        <title>Getting Values With Text</title>
+
+        <!--CSS-->
+        <link href="css/home.css" rel="stylesheet"/>
+
+        <!--JQUERY-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="input">
+            <ol>
+                <li id="test1"></li>
+                <li></li>
+                <li></li>
+                <li class="extra"></li>
+                <li class="extra" id="test5"></li>
+            </ol>
+        </div>
+
+        <p>Here is the HTML : </p>
+        <pre id="html-output"></pre>
+
+        <p>Here is the Text : </p>
+        <pre id="text-output"></pre>
+
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("li").text("This is a repeating text");
+        $(".extra").html("This is an <em>additional</em> line of no use lol");
+        //$(".extra").text("This is an <em>additional</em> line of no use lolzz");
+        $("#test1").html("This line is <em>linked</em> to the id test1");
+        $("#test5").text("This line is <em>linked</em> to the id test5");
+        
+        $("#html-output").text($("#input").html());
+        //$("#html-output").html($("#input").html());
+
+        $("#text-output").text($("#input").text());
+    })
+</script>

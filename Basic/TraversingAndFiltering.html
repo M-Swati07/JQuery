@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Your description here">
+        <meta name="author" content="Your name">
+        <title>Traversing and Filtering</title>
+
+        <!--CSS-->
+        <link href="css/home.css" rel="stylesheet"/>
+
+        <!--JQUERY-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <p>Pick the cars you like !!</p>
+        <div id="cars">
+            <input type="checkbox"/><span>Tesla</span>
+            <input type="checkbox"/><span>Ferrari</span>
+            <input type="checkbox"/><span>Lamborghini</span>
+            <input type="checkbox"/><span>Porsche</span>
+            <input type="checkbox"/><span>Mercedes</span>
+        </div>
+        <div id="output" class="linebreak-items"></div> <!--using linebreak-items will put the outputs in next line-->
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("[type = checkbox]").change(function(){
+            // calling this html tag will zero out the contents of the output tag and it replaces it with <p> label tag
+            $("#output").html("<p>You happen to like these cars :</p>").append($(":checked").next().clone());
+        })
+
+        /*
+        $(":checked") - gives the checkboxes that are checked
+        next() - gives the tag adjacent or next to the checked items
+        clone() - gives the copy of whatever that next item is
+        $("#output").append(above) - inserts all the above to the output using append
+
+        change() - this event will fire when the type will be checked/unchecked
+        append() - doesn't override the contents of the output tag, instead it appends to it.
+        */
+    })
+</script>

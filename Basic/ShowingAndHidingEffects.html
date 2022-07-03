@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Your description here">
+        <meta name="author" content="Your name">
+        <title>Showing and Hiding Effects</title>
+
+        <!--CSS-->
+        <link href="css/home.css" rel="stylesheet"/>
+
+        <!--JQUERY-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="shape red rectangle"></div>
+            <div class="shape blue rectangle"></div>
+            <div class="shape yellow circle"></div>
+            <div class="shape green square"></div>
+        </div>
+        <div class="row">
+            <button type="button" class="hidden" id="show-all">Show All</button>
+            <!--class is hidden because when all elements are showing the button should not be visible,
+            when any one shape is clicked then the button should be shown-->
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".shape").click(function(e){
+            $(e.target).hide();
+            $(".hidden").show();
+        })
+        $("#show-all").click(function(){
+            $(".shape").show(1000, "linear");   //linear transition type 
+            $(".hidden").hide();
+        })
+    })
+</script>

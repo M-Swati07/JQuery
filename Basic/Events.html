@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Your description here">
+        <meta name="author" content="Your name">
+        <title>Events</title>
+
+        <!--CSS-->
+        <link href="css/home.css" rel="stylesheet"/>
+
+        <!--JQUERY-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <button id="add-new-row" type="button">Add New Row</button>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var count = 1;
+        $("#add-new-row").click(function(){
+            $("#output").append("<p> New row added : "+count+ "</p>");
+            console.log(count);
+            count++;
+        })
+    })
+</script>
