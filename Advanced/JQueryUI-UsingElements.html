@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Your description here">
+        <meta name="author" content="Your name">
+        <title>JQuery UI - Using Elements</title>
+
+        <!--CSS-->
+        <link href="css/advanced.css" rel="stylesheet"/>
+        <link href="jquery-ui-1.13.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+
+        <!--JQUERY-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="jquery-ui-1.13.1.custom/jquery-ui.min.js" type="text/javascript"></script>
+    </head>
+    <body class="padded">
+        <img class="droppable" src="img/flower-bw.png"/>
+        <div class="draggable">
+            <p>Make it colourful</p>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".draggable").draggable();
+        $(".droppable").droppable({
+            drop : function(e, ui){
+                $(e.target).attr("src", "img/flower-color.png");
+                $(".draggable").hide();     //to hide the object being dragged on top of the flower, the dotted region
+            }
+        });
+    })
+</script>
+
+<!--Dragging Events
+    1. click
+    2. moving the mouse
+    3. releasing the mouse(target)
+
+    http://api.jqueryui.com/
+
+    target - is the drop zone or the flower in this case
+    attr - it will change the attribute on that page, specifically the source attribute which is switched
+            to colorful version of the flower
+-->
