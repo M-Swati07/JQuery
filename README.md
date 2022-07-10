@@ -25,6 +25,6 @@
 **Input :** $("#output div:last").addClass("triange").addClass("orange").show(); <br/>
 **Output :** div.shape.circle.red.triange.orange
 
-## JQuery UI
 
+## JQuery UI :
 (https://jqueryui.com/download/)
