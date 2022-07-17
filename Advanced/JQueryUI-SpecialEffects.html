@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Your description here">
+        <meta name="author" content="Your name">
+        <title>JQuery UI - Special Effects</title>
+
+        <!--CSS-->
+        <link href="css/advanced.css" rel="stylesheet"/>
+        <link href="jquery-ui-1.13.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+
+        <!--JQUERY-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="jquery-ui-1.13.1.custom/jquery-ui.min.js" type="text/javascript"></script>
+    </head>
+    <body class="padded">
+        <div class="animated">
+            Using JQuery Special Effects <br/><br/>
+            <button type="button" id="yes">Yes</button>
+            <button type="button" id="no">No</button>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".animated").dialog();
+        $("#yes").click(function(){
+            $(".animated").effect("bounce", 1000, function(){alert("Its a Yes :D ")});
+        })
+        $("#no").click(function(){
+            $(".animated").effect("shake", {}, 2000, function(){alert("Its a No :( ")});
+        })
+    })
+</script>
+
+
+
